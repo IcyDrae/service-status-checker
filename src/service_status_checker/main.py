@@ -2,7 +2,8 @@ import request
 
 
 if __name__ == '__main__':
-    print(request.make_head_request(
-        input("IP: ")
-    ))
+    service = input("Network service: ")
+    service = str(service)
+
+    print(request.is_service_online(service))
 
