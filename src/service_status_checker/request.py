@@ -1,12 +1,15 @@
 import requests
+import arguments
 
 
 request_method = "head"
 default_protocol = "http"
+args = arguments.initialize_arguments()
 
 
 def is_service_online(service: str):
     address = handle_address(service)
+    print(args)
 
     try:
         request = make_request(address)
@@ -30,11 +33,15 @@ def handle_address(definition: str) -> str:
 
 
 def make_request(address):
+    ssl = True
+    if args.disable_ssl:
+        ssl = False
+
     request = requests.request(
         request_method,
         address,
         timeout=5,
-        verify=False
+        verify=ssl
     )
 
     return request
