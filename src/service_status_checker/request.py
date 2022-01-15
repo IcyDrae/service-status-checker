@@ -30,7 +30,12 @@ def handle_address(definition: str) -> str:
 
 
 def make_request(address):
-    request = requests.request(request_method, address, timeout=5)
+    request = requests.request(
+        request_method,
+        address,
+        timeout=5,
+        verify=False
+    )
 
     return request
 
