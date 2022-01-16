@@ -9,14 +9,12 @@ args = arguments.initialize_arguments()
 interval = float(args.interval)
 
 def main_loop():
-    start_time = time.time()
     while True:
         time.sleep(
-            interval - ((time.time() - start_time) % interval)
+            interval - (time.time() % interval)
         )
-        print("tick")
 
-        print(is_service_online(str(args.service)))
+        #print(is_service_online(str(args.service)))
 
 
 def is_service_online(service: str):
