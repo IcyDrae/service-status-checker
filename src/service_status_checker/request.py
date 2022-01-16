@@ -22,7 +22,7 @@ def main_loop():
             return
 
 
-def output(service):
+def output(service: str) -> None:
     colors = {
         'red': '\033[31m',
         'color_end': '\033[m',
@@ -45,7 +45,7 @@ def output(service):
         )
 
 
-def is_service_online(service: str):
+def is_service_online(service: str) -> bool:
     address = handle_address(service)
 
     request = make_request(address)
@@ -66,7 +66,7 @@ def handle_address(definition: str) -> str:
 
 
 
-def make_request(address):
+def make_request(address: str):
     ssl = True
     if args.disable_ssl:
         ssl = False
