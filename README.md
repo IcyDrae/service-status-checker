@@ -13,9 +13,9 @@ The conditions for a service to be considered available are:
 
 ## In action
 
-<img alt="Both services working" src="https://github.com/MatrixEternal/service-status-checker/blob/main/assets/both_services_available.gif" width="400" height="200">
+<img alt="Both services working" src="https://github.com/MatrixEternal/service-status-checker/blob/main/assets/both_services_available.gif" width="600">
 <br>
-<img alt="One service down" src="https://github.com/MatrixEternal/service-status-checker/blob/main/assets/one_service_down.gif" width="400" height="200">
+<img alt="One service down" src="https://github.com/MatrixEternal/service-status-checker/blob/main/assets/one_service_down.gif" width="600">
 
 
 ## Arguments
