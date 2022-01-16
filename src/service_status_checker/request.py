@@ -14,16 +14,38 @@ def main_loop():
             interval - (time.time() % interval)
         )
 
-        #print(is_service_online(str(args.service)))
+        try:
+            output()
+        except Exception as e:
+            print(e)
+            return
+
+
+def output():
+    colors = {
+        'red': '\033[31m',
+        'color_end': '\033[m',
+        'green': '\033[32m',
+        'yellow': '\033[33m',
+        'blue': '\033[34m'
+    }
+
+    time_now = time.localtime()
+    time_now = time.strftime("%H:%M:%S", time_now)
+    if is_service_online(str(args.service)):
+        print(
+            colors["green"] + "[OK]" + colors["color_end"],
+            "HTTP service [{}] is available @{}\n".format(args.service, colors["yellow"] + time_now + colors["color_end"]))
+    else:
+        print(
+            colors["red"] + "[error]" + colors["color_end"],
+            "HTTP service [{}] unavailable @{}\n".format(args.service, colors["yellow"] + time_now + colors["color_end"]))
 
 
 def is_service_online(service: str):
     address = handle_address(service)
 
-    try:
-        request = make_request(address)
-    except Exception as e:
-        return e
+    request = make_request(address)
 
     return request.status_code == 200 and \
            not request.is_redirect
