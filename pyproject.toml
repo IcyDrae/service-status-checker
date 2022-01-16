@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "service-status-checker"
 version = "1.0.0"
-description = ""
+description = "A scheduled HTTP services availability checker using HEAD method."
 authors = ["MatrixEternal <35934418+MatrixEternal@users.noreply.github.com>"]
 license = "GPL-3.0-only"
 
