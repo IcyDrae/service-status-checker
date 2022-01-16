@@ -6,16 +6,17 @@ import arguments
 request_method = "head"
 default_protocol = "http"
 args = arguments.initialize_arguments()
+interval = float(args.interval)
 
 def main_loop():
     start_time = time.time()
     while True:
-        time.sleep(float(args.interval) - ((time.time() - start_time) % float(args.interval)))
+        time.sleep(
+            interval - ((time.time() - start_time) % interval)
+        )
         print("tick")
-        # service = input("Network service: ")
-        # service = str(service)
 
-        # print(request.is_service_online(service))
+        print(is_service_online(str(args.service)))
 
 
 def is_service_online(service: str):
