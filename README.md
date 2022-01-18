@@ -48,4 +48,4 @@ This software is built using [pyinstaller](https://pyinstaller.readthedocs.io) a
 Please head to [the contributors documentation](CONTRIBUTORS.md).
 
 ## License
-[GPLv3](LICENSE.txt)
+[GPLv3](LICENSE)

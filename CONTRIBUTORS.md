@@ -1,6 +1,6 @@
 ### First steps
 - When contributing to this repository, please open an issue first and explain the change- feature, bug, optimization?
-    - describe the issue as clearly as possible?
+    - describe the issue as clearly as possible
     - platform details
     - usage details
     - what did you expect to happen
